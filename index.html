@@ -34,18 +34,25 @@
         <ol id="randomList"></ol>
       </div>
     </div>
+    <footer style="position: absolute; right: 0; bottom: 0;left: 0;padding: 1rem;background-color: #efefef;text-align: center;">
+      Created by <a href="https://matthewbusche.com" target="_blank">Matt Busche</a>
+      <a href="https://twitter.com/mrbusche" target="_blank">
+        <img
+          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAMAAAC6V+0/AAAAS1BMVEUdofL///8aoPEKmfEVnvERnPEDlvDx+f6n2vpcvPWAyvdEsfTj8/3d8P3a7/zD5vu74/ut3fqg1/mS0fiGzPh8yPdRt/QyqfMAlPCGNm7pAAAAcklEQVQY063Oyw7DMAhEUWDAsZO+3///pW2RmHTf3IUXR9YI2S4z+ckt3+YtgjZgn3dRnca1FLsD4NBvp9pAV72JJ3I3hrJXbeJM24On4Fg4h1TohbD1aPQpbQmayHNOe0CIfs9/Fw9Zs0AzNO7RjfJ/b/csAlhCi+ExAAAAAElFTkSuQmCC"
+      /></a>
+    </footer>
   </body>
   <script>
-    document.getElementById("teams").addEventListener("paste", e => {
+    document.getElementById('teams').addEventListener('paste', e => {
       window.setTimeout(() => {
-        const data = document.getElementById("teams").value;
-        const list = data.split("\n");
+        const data = document.getElementById('teams').value;
+        const list = data.split('\n');
         const arr = shuffle(list);
-        document.getElementById("title").classList.remove("d-none");
-        const randomList = document.getElementById("randomList");
-        let entry = "";
+        document.getElementById('title').classList.remove('d-none');
+        const randomList = document.getElementById('randomList');
+        let entry = '';
         for (const dl in arr) {
-          entry = document.createElement("li");
+          entry = document.createElement('li');
           entry.appendChild(document.createTextNode(arr[dl]));
           randomList.appendChild(entry);
         }
@@ -54,8 +61,8 @@
 
     function shuffle(array) {
       let currentIndex = array.length;
-      let temporaryValue = "";
-      let randomIndex = "";
+      let temporaryValue = '';
+      let randomIndex = '';
       while (0 !== currentIndex) {
         randomIndex = Math.floor(Math.random() * currentIndex);
         currentIndex -= 1;
@@ -72,7 +79,7 @@
     function gtag() {
       dataLayer.push(arguments);
     }
-    gtag("js", new Date());
-    gtag("config", "UA-49379810-1");
+    gtag('js', new Date());
+    gtag('config', 'UA-49379810-1');
   </script>
 </html>
