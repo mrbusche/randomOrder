@@ -1,3 +1,3 @@
 JavaScript code that generates a random order from a return separated list
 
-Working example https://matthewbusche.com/random/
+Online example https://randomordergenerator.com/
