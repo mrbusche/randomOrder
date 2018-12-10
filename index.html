@@ -22,6 +22,27 @@
         -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
       }
 
+      html,
+      body {
+        height: 100%;
+      }
+      body {
+        display: flex;
+        flex-direction: column;
+      }
+      .content {
+        flex: 1 0 auto;
+      }
+      .footer {
+        flex-shrink: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        padding: 1rem;
+        background-color: #efefef;
+        text-align: center;
+      }
+
       body {
         margin: 0;
         font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji',
@@ -101,14 +122,13 @@
   </head>
 
   <body>
-    <div class="container-fluid">
+    <div class="content container-fluid">
       <div>
-        <h1>Enter a list to generate a random order</h1>
-        <label for="teams">Items</label>
+        <h1>Paste a list to generate a random order</h1>
         <textarea
           id="teams"
           name="teams"
-          placeholder="Enter items separated by a line break"
+          placeholder="Paste items separated by a line break"
           rows="5"
           class="form-control"
           autofocus
@@ -117,11 +137,16 @@
         <ol id="randomList"></ol>
       </div>
     </div>
-    <footer style="position: absolute; right: 0; bottom: 0;left: 0;padding: 1rem;background-color: #efefef;text-align: center;">
+    <footer class="footer">
       Created by <a href="https://matthewbusche.com" target="_blank">Matt Busche</a>
       <a href="https://twitter.com/mrbusche" target="_blank">
         <img
           src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAMAAAC6V+0/AAAAS1BMVEUdofL///8aoPEKmfEVnvERnPEDlvDx+f6n2vpcvPWAyvdEsfTj8/3d8P3a7/zD5vu74/ut3fqg1/mS0fiGzPh8yPdRt/QyqfMAlPCGNm7pAAAAcklEQVQY063Oyw7DMAhEUWDAsZO+3///pW2RmHTf3IUXR9YI2S4z+ckt3+YtgjZgn3dRnca1FLsD4NBvp9pAV72JJ3I3hrJXbeJM24On4Fg4h1TohbD1aPQpbQmayHNOe0CIfs9/Fw9Zs0AzNO7RjfJ/b/csAlhCi+ExAAAAAElFTkSuQmCC"
+      /></a>
+      <a href="https://github.com/mrbusche/randomOrder" target="_blank">
+        <img
+          src="
+      data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAMAAAC6V+0/AAAAe1BMVEX///8WFBUUEhMLCQoHBAYAAAAQDQ8iICG0srOFg4RoZ2dxcHAvLS75+fn29vaCgIFfXV5GREUtKywpJyj8/PzPzs6TkpJjY2NYV1dMS0sZFxjn5+fd3d3Z2NjV1NXGxsbGxca6ubqwsLA0MzQdGx2cnJx7enp3dnZvbm+Alsl1AAAA0ElEQVQY013O13KDMBBA0a2SAAE2mOpeUv7/C7NDNFYm5/GupBVsmjBFxDiFBt6CZyZEYvYBklIdJk7L1ISIkQwykWw1KM/nSsV70eo8swbb4Z2M8DaK8w08GKXKsRLkB+yY1iHHYSXeQUduD3/sHXWAaJPMbiJa/H/SYiTq6tzqjihCySRFjgUjl3AX/9TieABzOBZCyHeA/jVMSovVelmtud7GV33B3I/p50h6BdPqN/yuahlJ2vS49svHFsXlpZeoX2A+9XmB7HYCc7rB5geYUQlDWYO9BgAAAABJRU5ErkJggg=="
       /></a>
     </footer>
   </body>
