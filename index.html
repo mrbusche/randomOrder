@@ -150,9 +150,10 @@
       /></a>
     </footer>
   </body>
-
+  <script src="https://browser.sentry-cdn.com/4.4.1/bundle.min.js" crossorigin="anonymous"></script>
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-61292618-1"></script>
   <script>
+    Sentry.init({ dsn: 'https://3690919e7aa0422c9a490c5d7c50253c@sentry.io/1341508' });
     window.dataLayer = window.dataLayer || [];
     function gtag() {
       dataLayer.push(arguments);
